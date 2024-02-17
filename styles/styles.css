@@ -1,0 +1,80 @@
+
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+}
+
+#calculator {
+    font-family: Arial, sans-serif;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 20px; /* Reduce border-radius */
+    max-width: 400px; /* Adjust max-width */
+    overflow: hidden;
+    width: 100%; /* Make the calculator take the full width */
+}
+
+#display {
+    width: calc(100% - 40px); /* Adjust width and padding */
+    padding: 20px; /* Adjust padding */
+    font-size: 4rem; /* Adjust font size */
+    text-align: right; /* Align text to the right */
+    border: none;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Adjust minmax */
+    gap: 5px; /* Reduce gap */
+    padding: 15px; /* Adjust padding */
+}   
+
+button {
+    height: 70px; /* Adjust button height */
+    font-size: 2.5rem; /* Adjust font size */
+    border-radius: 15px; /* Adjust border-radius */
+}
+
+button:hover{
+    background-color: hsl(0, 0%, 50%);
+    transition: 0.5s;
+}
+
+button:active{
+    background-color: hsl(0, 3%, 68%);
+}
+
+.operator_btn {
+    background-color: hsl(45, 100%, 42%);
+}
+
+
+.operator_btn:hover{
+    background-color: hsl(48, 100%, 50%);
+    transition: 0.5s;
+}
+
+.operator_btn:active{
+    background-color: hsl(48, 100%, 75%);
+}
+
+/* Add media query for responsiveness */
+@media (max-width: 400px) {
+    #calculator {
+        border-radius: 15px; /* Further reduce border-radius for smaller screens */
+    }
+
+    button {
+        height: 60px; /* Further reduce button height */
+        font-size: 2rem; /* Further reduce font size */
+        border-radius: 10px; /* Further reduce border-radius */
+    }
+}
+
+
